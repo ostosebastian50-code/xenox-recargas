@@ -3,7 +3,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Xenox Recargas</title>
-
 <style>
 body{
 background:#0b0718 url('https://i.pinimg.com/736x/52/98/df/5298dff99b00bdee3143d64a204b8aa2.jpg') no-repeat center center fixed;
@@ -12,319 +11,59 @@ font-family:Arial;
 color:white;
 margin:0;
 }
-
-/* HEADER */
-.header{
-text-align:center;
-font-size:32px;
-font-weight:bold;
-padding:20px;
-color:#c084fc;
-letter-spacing:2px;
-animation:neon 2s infinite alternate;
-}
-
-@keyframes neon{
-from{ text-shadow:0 0 5px #a855f7 }
-to{ text-shadow:0 0 20px #a855f7 }
-}
-
-/* ESTADO SERVICIO */
-.estado-servicio{
-text-align:center;
-background:#0f2f1f;
-color:#22c55e;
-padding:10px;
-font-size:14px;
-border-bottom:1px solid #22c55e;
-}
-
-/* CONTAINER */
-.container{
-max-width:520px;
-margin:auto;
-padding:15px;
-}
-
-.card{
-background:#151126cc;
-border:1px solid #7c3aed;
-border-radius:14px;
-padding:20px;
-margin-top:20px;
-box-shadow:0 0 15px rgba(124,58,237,0.3);
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:10px;
-}
-
-.opcion{
-background:#1c1536;
-border:1px solid #7c3aed;
-border-radius:10px;
-padding:15px;
-text-align:center;
-cursor:pointer;
-transition:.3s;
-}
-
-.opcion:hover{
-transform:scale(1.05);
-}
-
-.seleccionado{
-border:2px solid #22c55e;
-background:#0f2f1f;
-}
-
-button{
-padding:12px;
-border:none;
-border-radius:10px;
-cursor:pointer;
-}
-
-.confirm{
-background:#7c3aed;
-color:white;
-width:100%;
-margin-top:10px;
-}
-
-.metodo{
-background:#1c1536;
-border:1px solid #7c3aed;
-border-radius:10px;
-padding:15px;
-margin-top:10px;
-cursor:pointer;
-}
-
-.metodo.seleccionado{
-border:2px solid #22c55e;
-background:#0f2f1f;
-}
-
-input,select{
-width:100%;
-padding:12px;
-margin-top:10px;
-border:none;
-border-radius:8px;
-background:#201942;
-color:white;
-font-weight:bold;
-}
-
-.total{
-margin-top:15px;
-background:#141028;
-padding:15px;
-border-radius:10px;
-font-weight:bold;
-color:white;
-}
-
-.verificar{
-background:#22c55e;
-color:black;
-font-weight:bold;
-width:100%;
-margin-top:15px;
-}
-
-/* CARGA Y ID */
-#pantallaCarga{
-position:fixed;
-top:0; left:0;
-width:100%; height:100%;
-background:#0b0718;
-display:flex;
-align-items:center;
-justify-content:center;
-flex-direction:column;
-z-index:9999;
-}
-
-.logoCarga{
-font-size:38px;
-color:#c084fc;
-font-weight:bold;
-letter-spacing:3px;
-text-shadow:0 0 20px #a855f7;
-}
-
-.barraCarga{
-width:230px;
-height:10px;
-background:#1c1536;
-border-radius:10px;
-margin-top:20px;
-overflow:hidden;
-}
-
-.progresoCarga{
-height:100%;
-width:0;
-background:#7c3aed;
-animation:cargarPagina 3s forwards;
-}
-
-@keyframes cargarPagina{
-0%{width:0}
-100%{width:100%}
-}
-
-.barraID{
-width:200px;
-height:8px;
-background:#1c1536;
-border-radius:10px;
-overflow:hidden;
-margin:auto;
-margin-top:10px;
-}
-
-.progresoID{
-height:100%;
-width:0;
-background:#7c3aed;
-animation:cargarID 2s forwards;
-}
-
-@keyframes cargarID{
-0%{width:0}
-100%{width:100%}
-}
-
-.loader{
-border:4px solid #222;
-border-top:4px solid #7c3aed;
-border-radius:50%;
-width:40px;
-height:40px;
-animation:spin 1s linear infinite;
-margin:auto;
-}
-
-@keyframes spin{
-0%{transform:rotate(0)}
-100%{transform:rotate(360deg)}
-}
-
-.game{
-display:flex;
-align-items:center;
-gap:10px;
-background:#1c1536;
-padding:10px;
-border-radius:10px;
-margin-top:8px;
-}
-
-.estado{
-margin-left:auto;
-font-size:12px;
-padding:4px 8px;
-border-radius:6px;
-}
-
-.rojo{background:#7f1d1d}
-.azul{background:#1e3a8a}
-.amarillo{background:#92400e}
-
-/* BOTONES FLOTANTES */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50px;
-font-weight:bold;
-box-shadow:0 0 10px rgba(0,0,0,.5);
-cursor:pointer;
-display:none;
-}
-
-.soporte{
-position:fixed;
-bottom:90px;
-right:20px;
-background:#7c3aed;
-color:white;
-padding:15px;
-border-radius:50px;
-font-weight:bold;
-cursor:pointer;
-animation:flotar 2s infinite alternate;
-}
-
-@keyframes flotar{
-0%{transform:translateY(0)}
-50%{transform:translateY(-5px)}
-100%{transform:translateY(0)}
-}
-
-/* BOTONES COPIAR */
-.copiar{
-background:#1c1536;
-color:white;
-padding:10px 12px;
-border-radius:6px;
-margin:5px;
-cursor:pointer;
-display:inline-block;
-}
-
-.copiarTodos{
-background:#7c3aed;
-color:white;
-padding:12px 15px;
-border-radius:8px;
-cursor:pointer;
-display:block;
-margin:10px auto;
-}
-
-.advertencia{
-color:#fbbf24;
-font-size:12px;
-margin-top:5px;
-text-align:left;
-}
-
-.recargaExitosa{
-display:none;
-text-align:center;
-margin:15px 0;
-color:#22c55e;
-font-weight:bold;
-font-size:18px;
-}
+.header{ text-align:center; font-size:32px; font-weight:bold; padding:20px; color:#c084fc; letter-spacing:2px; animation:neon 2s infinite alternate;}
+@keyframes neon{ from{ text-shadow:0 0 5px #a855f7 } to{ text-shadow:0 0 20px #a855f7 } }
+.estado-servicio{ text-align:center; background:#0f2f1f; color:#22c55e; padding:10px; font-size:14px; border-bottom:1px solid #22c55e; }
+.container{ max-width:520px; margin:auto; padding:15px; }
+.card{ background:#151126cc; border:1px solid #7c3aed; border-radius:14px; padding:20px; margin-top:20px; box-shadow:0 0 15px rgba(124,58,237,0.3);}
+.grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:10px; }
+.opcion{ background:#1c1536; border:1px solid #7c3aed; border-radius:10px; padding:15px; text-align:center; cursor:pointer; transition:.3s;}
+.opcion:hover{ transform:scale(1.05);}
+.seleccionado{ border:2px solid #22c55e; background:#0f2f1f;}
+button{ padding:12px; border:none; border-radius:10px; cursor:pointer;}
+.confirm{ background:#7c3aed; color:white; width:100%; margin-top:10px;}
+.metodo{ background:#1c1536; border:1px solid #7c3aed; border-radius:10px; padding:15px; margin-top:10px; cursor:pointer;}
+.metodo.seleccionado{ border:2px solid #22c55e; background:#0f2f1f;}
+input,select{ width:100%; padding:12px; margin-top:10px; border:none; border-radius:8px; background:#201942; color:white; font-weight:bold; transition:.2s;}
+input.error{ border:2px solid #f00 !important;}
+.total{ margin-top:15px; background:#141028; padding:15px; border-radius:10px; font-weight:bold; color:white;}
+.verificar{ background:#22c55e; color:black; font-weight:bold; width:100%; margin-top:15px; cursor:pointer;}
+#pantallaCarga{ position:fixed; top:0; left:0; width:100%; height:100%; background:#0b0718; display:flex; align-items:center; justify-content:center; flex-direction:column; z-index:9999;}
+.logoCarga{ font-size:38px; color:#c084fc; font-weight:bold; letter-spacing:3px; text-shadow:0 0 20px #a855f7;}
+.barraCarga{ width:230px; height:10px; background:#1c1536; border-radius:10px; margin-top:20px; overflow:hidden;}
+.progresoCarga{ height:100%; width:0; background:#7c3aed; animation:cargarPagina 3s forwards;}
+@keyframes cargarPagina{0%{width:0}100%{width:100%}}
+.barraID{ width:200px; height:8px; background:#1c1536; border-radius:10px; overflow:hidden; margin:auto; margin-top:10px;}
+.progresoID{ height:100%; width:0; background:#7c3aed; animation:cargarID 2s forwards;}
+@keyframes cargarID{0%{width:0}100%{width:100%}}
+.loader{ border:4px solid #222; border-top:4px solid #7c3aed; border-radius:50%; width:40px; height:40px; animation:spin 1s linear infinite; margin:auto;}
+@keyframes spin{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}
+.game{ display:flex; align-items:center; gap:10px; background:#1c1536; padding:10px; border-radius:10px; margin-top:8px;}
+.estado{ margin-left:auto; font-size:12px; padding:4px 8px; border-radius:6px;}
+.rojo{background:#7f1d1d}.azul{background:#1e3a8a}.amarillo{background:#92400e}
+.whatsapp{ position:fixed; bottom:20px; right:20px; background:#25D366; color:white; padding:15px; border-radius:50px; font-weight:bold; box-shadow:0 0 10px rgba(0,0,0,.5); cursor:pointer; display:none;}
+.soporte{ position:fixed; bottom:90px; right:20px; background:#7c3aed; color:white; padding:15px; border-radius:50px; font-weight:bold; cursor:pointer; animation:flotar 2s infinite alternate;}
+@keyframes flotar{0%{transform:translateY(0)}50%{transform:translateY(-5px)}100%{transform:translateY(0)}}
+.copiar{ background:#1c1536; color:white; padding:10px 12px; border-radius:6px; margin:5px; cursor:pointer; display:inline-block;}
+.copiarTodos{ background:#7c3aed; color:white; padding:12px 15px; border-radius:8px; cursor:pointer; display:block; margin:10px auto;}
+.advertencia{ color:#fbbf24; font-size:12px; margin-top:5px; text-align:center;}
+.shake { animation: shake 0.5s;}
+@keyframes shake {0% { transform: translateX(0); }25% { transform: translateX(-5px); }50% { transform: translateX(5px); }75% { transform: translateX(-5px); }100% { transform: translateX(0); }}
+.recargaExitosa{ display:none; text-align:center; margin:15px 0; color:#22c55e; font-weight:bold; font-size:18px;}
 </style>
 </head>
-
 <body>
-
-<!-- PANTALLA CARGA -->
 <div id="pantallaCarga">
 <div class="logoCarga">Xenox Recargas</div>
 <div class="barraCarga"><div class="progresoCarga"></div></div>
 </div>
 
 <div class="header">Xenox Recargas</div>
-<div class="estado-servicio">
-🟢 Servicio activo | Recargas 24/7 | Tiempo estimado 1-5 minutos
-</div>
+<div class="estado-servicio">🟢 Servicio activo | Recargas 24/7 | Tiempo estimado 1-5 minutos</div>
 
 <div class="container">
 
-<!-- ID DEL JUGADOR -->
+<!-- ID -->
 <div class="card">
 <h2>ID del jugador</h2>
 <input id="playerID" placeholder="Ingresa tu ID">
@@ -356,7 +95,7 @@ font-size:18px;
 <div class="metodo" onclick="selectPago(this,'pix')">Pix</div>
 </div>
 
-<!-- FORMULARIO PAGO MOVIL -->
+<!-- FORM PAGO MOVIL -->
 <div class="card" id="formPagoMovil" style="display:none">
 <h2>Pago Móvil</h2>
 <div style="text-align:center;">
@@ -366,27 +105,25 @@ font-size:18px;
 <button class="copiarTodos" onclick="copiarTodosMovil()">Copiar todos los datos</button>
 </div>
 
-<!-- FORMULARIOS CON ADVERTENCIAS -->
 <input placeholder="Número de WhatsApp (Venezuela)" required>
 <div class="advertencia">⚠️ Ingresar número de WhatsApp</div>
 
 <input placeholder="Correo para notificación (Opcional)">
-<div class="advertencia">ℹ️ El correo ingresado será utilizado exclusivamente para el envío de su comprobante electrónico.</div>
 
-<input placeholder="Últimos 6 dígitos de la referencia" maxlength="6">
+<input placeholder="Últimos 6 dígitos de la referencia" maxlength="6" required>
 <div class="advertencia">⚠️ Ingresar últimos 6 dígitos de la referencia</div>
 
 <div style="margin:15px 0; text-align:center; border:2px dashed #7c3aed; padding:20px; border-radius:10px;">
 📷 Subir captura del comprobante
-<input type="file">
-<div class="advertencia">⚠️ Subir comprobante y ⚠️ Subir comprobantes falsos o manipulados constituye fraude electrónico</div>
+<input type="file" required>
 </div>
+<div class="advertencia">⚠️ Subir comprobantes falsos o manipulados constituye fraude electrónico</div>
 
 <div class="total">💰 Total a pagar: <span id="totalMovil"></span> Bs</div>
 <button class="verificar" onclick="verificarPago()">VERIFICAR PAGO</button>
 </div>
 
-<!-- FORMULARIO PIX -->
+<!-- FORM PAGO PIX -->
 <div class="card" id="formPix" style="display:none">
 <h2>Pagar con Pix</h2>
 <div style="text-align:center;">
@@ -397,13 +134,12 @@ font-size:18px;
 <div class="advertencia">⚠️ Ingresar número de WhatsApp</div>
 
 <input placeholder="Correo para notificación (Opcional)">
-<div class="advertencia">ℹ️ El correo ingresado será utilizado exclusivamente para el envío de su comprobante electrónico.</div>
 
 <div style="margin:15px 0; text-align:center; border:2px dashed #7c3aed; padding:20px; border-radius:10px;">
 📷 Subir captura del comprobante
-<input type="file">
-<div class="advertencia">⚠️ Subir comprobante y ⚠️ Subir comprobantes falsos o manipulados constituye fraude electrónico</div>
+<input type="file" required>
 </div>
+<div class="advertencia">⚠️ Subir comprobantes falsos o manipulados constituye fraude electrónico</div>
 
 <div class="total">💰 Total a pagar: <span id="totalPix"></span> R$</div>
 <button class="verificar" onclick="verificarPago()">VERIFICAR PAGO</button>
@@ -417,21 +153,16 @@ font-size:18px;
 <div class="game"><img src="https://i.pinimg.com/736x/94/76/bb/9476bb2a4d3910f6c63819d27abd24ef.jpg" width="35"> Blood Strike <span class="estado amarillo">NO DISPONIBLE</span></div>
 </div>
 
-<!-- RECARGA EXITOSA -->
 <div class="recargaExitosa" id="recargaExitosa">
 🎉 Recarga exitosa, los diamantes ya están disponibles.
 </div>
 
-<!-- BOTONES FLOTANTES -->
 <div class="whatsapp" id="whatsappBtn" onclick="enviarWhatsApp()">Enviar pedido por WhatsApp</div>
 <div class="soporte" onclick="window.open('https://wa.me/12268608782')">Soporte WhatsApp</div>
 
 <script>
 setTimeout(()=>{document.getElementById("pantallaCarga").style.display="none"},3000)
-
-let diamante=""
-let metodo=""
-let pedidoID="XR-"+Math.floor(Math.random()*9000+1000)
+let diamante="",metodo="",pedidoID="XR-"+Math.floor(Math.random()*9000+1000)
 
 function confirmarID(){
 let id=document.getElementById("playerID").value
@@ -443,67 +174,23 @@ document.getElementById("jugadorOK").style.display="block"
 document.getElementById("diamantes").style.display="block"
 },2000)
 }
-
-function selectDiamante(btn,d){
-diamante=d
-document.querySelectorAll(".opcion").forEach(e=>e.classList.remove("seleccionado"))
-btn.classList.add("seleccionado")
-document.getElementById("pagos").style.display="block"
-actualizarPrecio()
-}
-
-function selectPago(btn,m){
-metodo=m
-document.querySelectorAll(".metodo").forEach(e=>e.classList.remove("seleccionado"))
-btn.classList.add("seleccionado")
-document.getElementById("formPagoMovil").style.display="none"
-document.getElementById("formPix").style.display="none"
-if(m=="movil"){document.getElementById("formPagoMovil").style.display="block"}
-if(m=="pix"){document.getElementById("formPix").style.display="block"}
-actualizarPrecio()
-}
-
-function actualizarPrecio(){
-let preciosMovil={110:650,310:1800,520:2900,1060:5800,2180:11000,5600:28000}
-let preciosPix={110:7,310:17,520:27,1060:50,2180:98,5600:250}
-if(metodo=="movil"){document.getElementById("totalMovil").innerText=preciosMovil[diamante]}
-if(metodo=="pix"){document.getElementById("totalPix").innerText=preciosPix[diamante]}
-}
-
+function selectDiamante(btn,d){diamante=d; document.querySelectorAll(".opcion").forEach(e=>e.classList.remove("seleccionado")); btn.classList.add("seleccionado"); document.getElementById("pagos").style.display="block"; actualizarPrecio()}
+function selectPago(btn,m){metodo=m; document.querySelectorAll(".metodo").forEach(e=>e.classList.remove("seleccionado")); btn.classList.add("seleccionado"); document.getElementById("formPagoMovil").style.display="none"; document.getElementById("formPix").style.display="none"; if(m=="movil"){document.getElementById("formPagoMovil").style.display="block"} if(m=="pix"){document.getElementById("formPix").style.display="block"} actualizarPrecio()}
+function actualizarPrecio(){let preciosMovil={110:650,310:1800,520:2900,1060:5800,2180:11000,5600:28000}; let preciosPix={110:7,310:17,520:27,1060:50,2180:98,5600:250}; if(metodo=="movil"){document.getElementById("totalMovil").innerText=preciosMovil[diamante]} if(metodo=="pix"){document.getElementById("totalPix").innerText=preciosPix[diamante]}}
 function verificarPago(){
-document.getElementById("whatsappBtn").style.display="block"
-localStorage.setItem("recargaExitosa","true")
+let camposValidos=true;
+let formFields=[];
+if(metodo==="movil"){formFields=document.querySelectorAll("#formPagoMovil input[required]");}
+else if(metodo==="pix"){formFields=document.querySelectorAll("#formPix input[required]");}
+formFields.forEach(f=>f.classList.remove("error"));
+formFields.forEach(f=>{if(!f.value){camposValidos=false; f.classList.add("error");}});
+const botonVerificar=document.querySelectorAll(".verificar")[metodo=="movil"?0:1];
+if(!camposValidos){botonVerificar.classList.add("shake"); setTimeout(()=>botonVerificar.classList.remove("shake"),500); return;}
+document.getElementById("whatsappBtn").style.display="block";
 }
-
-function enviarWhatsApp(){
-let id=document.getElementById("playerID").value
-let numero="12268608782"
-let mensaje="🎮 *XENOX RECARGAS* %0A%0A"
-mensaje+="📦 Pedido: "+pedidoID+"%0A"
-mensaje+="🎮 Juego: Free Fire%0A"
-mensaje+="🆔 ID Jugador: "+id+"%0A"
-mensaje+="💎 Diamantes: "+diamante+"%0A"
-mensaje+="💳 Metodo de pago: "+metodo+"%0A%0A"
-mensaje+="⏱ Tiempo estimado: 1-5 minutos"
-window.open("https://wa.me/"+numero+"?text="+mensaje)
-}
-
-function copiar(text){
-navigator.clipboard.writeText(text)
-alert("Copiado")
-}
-
-function copiarTodosMovil(){
-navigator.clipboard.writeText("Banco Venezuela 0102\nTeléfono: 04147604669\nCédula: 17047936")
-alert("Todos los datos copiados")
-}
-
-window.onload=function(){
-if(localStorage.getItem("recargaExitosa")=="true"){
-document.getElementById("recargaExitosa").style.display="block"
-}
-}
+function enviarWhatsApp(){let id=document.getElementById("playerID").value; let numero="12268608782"; let mensaje="🎮 *XENOX RECARGAS* %0A%0A"; mensaje+="📦 Pedido: "+pedidoID+"%0A"; mensaje+="🎮 Juego: Free Fire%0A"; mensaje+="🆔 ID Jugador: "+id+"%0A"; mensaje+="💎 Diamantes: "+diamante+"%0A"; mensaje+="💳 Metodo de pago: "+metodo+"%0A%0A"; mensaje+="⏱ Tiempo estimado: 1-5 minutos"; window.open("https://wa.me/"+numero+"?text="+mensaje);}
+function copiar(text){navigator.clipboard.writeText(text); alert("Copiado")}
+function copiarTodosMovil(){navigator.clipboard.writeText("Banco Venezuela 0102\nTeléfono: 04147604669\nCédula: 17047936"); alert("Todos los datos copiados")}
 </script>
-
 </body>
 </html>
